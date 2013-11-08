@@ -12,7 +12,7 @@ maxRecieveSize = 1024
 try:
 	clientSocket.connect((host, port))
 	print u"连接创建成功！"
-	message = raw_input(u"message:")
+	message = raw_input("输入传输数据:")
 	clientSocket.send(message)
 	
 	serverMessage = clientSocket.recv(maxRecieveSize)

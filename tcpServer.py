@@ -28,10 +28,10 @@ try:
 			print u"出现一个异常"
 			print e
 
-		finally:
-			client.close()
-
-
 except EnvironmentError as e:
 	print u"绑定socket失败..."
-	print e
+	print e	
+
+except KeyboardInterrupt:
+	serverSocket.close()
+	print u"服务器退出..."

@@ -9,7 +9,7 @@ address = (socket.gethostname(), 6789)
 try:
 	clientSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-	data = raw_input("data to send:")
+	data = raw_input("输入数据:")
 	clientSocket.sendto(data, address)
 
 	recvData = clientSocket.recvfrom(maxRecvSize)
